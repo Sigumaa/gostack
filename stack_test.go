@@ -43,4 +43,14 @@ func TestStack(t *testing.T) {
 		t.Errorf("Expected peeked element to be 4, got %d", elem)
 	}
 
+	if s.Len() != 4 {
+		t.Errorf("Expected length of 4, got %d", s.Len())
+	}
+
+	s.Clear()
+
+	if s.Len() != 0 {
+		t.Errorf("Expected length of 0, got %d", s.Len())
+	}
+
 }

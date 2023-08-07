@@ -37,6 +37,10 @@ func (s *Stack[T]) Len() int {
 	return len(s.elements)
 }
 
+func (s *Stack[T]) Clear() {
+	s.elements = []T{}
+}
+
 func zero[T any]() T {
 	var zero T
 	return zero
