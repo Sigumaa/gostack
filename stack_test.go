@@ -13,6 +13,16 @@ func TestStack(t *testing.T) {
 		t.Errorf("Expected length of 0, got %d", s.Len())
 	}
 
+	_, err := s.Pop()
+	if err == nil {
+		t.Errorf("Expected error, got nil")
+	}
+
+	_, err = s.Peek()
+	if err == nil {
+		t.Errorf("Expected error, got nil")
+	}
+
 	s.Push(1)
 	s.Push(2)
 	s.Push(3)
