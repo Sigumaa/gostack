@@ -25,6 +25,14 @@ func (s *Stack[T]) Pop() (T, error) {
 	return elem, nil
 }
 
+func (s *Stack[T]) Peek() (T, error) {
+	if s.Len() == 0 {
+		return zero[T](), fmt.Errorf("Stack is empty")
+	}
+	elem := s.elements[s.Len()-1]
+	return elem, nil
+}
+
 func (s *Stack[T]) Len() int {
 	return len(s.elements)
 }
