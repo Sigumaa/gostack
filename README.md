@@ -47,3 +47,7 @@ To clear the stack, use the clear method
 ```go
 s.Clear()
 ```
+
+## Example
+
+check it out [here](example/ex.go)
